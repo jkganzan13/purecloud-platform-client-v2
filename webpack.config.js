@@ -5,7 +5,7 @@ var path = require('path');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var env = process.env.WEBPACK_ENV;
 
-var libraryName = 'library';
+var libraryName = 'purecloud-platform-client-v2';
 var plugins = [], outputFile = 'index.js';
 
 if (env === 'build') {
@@ -14,7 +14,6 @@ if (env === 'build') {
 
 var config = {
   entry: __dirname + '/src/index.js',
-  devtool: 'source-map',
   output: {
     path: __dirname,
     filename: outputFile,
